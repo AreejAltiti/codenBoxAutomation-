@@ -32,5 +32,12 @@ it('should select for API from dropdown', () => {
 
 })
 
+it('Chining assertion example', () => {
+    cy.visit("https://codenboxautomationlab.com/practice/")
+    cy.get('.page-title').should('be.visible').and('contain','Automation Practice')
+});
+
+
+
 
 });

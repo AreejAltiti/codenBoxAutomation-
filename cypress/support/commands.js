@@ -26,3 +26,13 @@
 
 
 ///<reference types="Cypress" /> 
+
+
+Cypress.Commands.add('login', (usename, password) => { 
+cy.clearAllCookies()
+cy.clearAllLocalStorage()
+cy.get("#user_login").type(usename)
+cy.get("#user_pass").type(password)
+cy.contains('Log In').click()
+
+ })
